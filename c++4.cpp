@@ -102,75 +102,75 @@ int main()
     return 0;
 }
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
-class Student
-{
-    public:
-        string name;
-        int roll;
-        int marks;
-        Student(string name , int roll , int marks)
-        {
-            this->name = name;
-            this->roll = roll;
-            this->marks = marks;
-        }
-};
-class cmp
-{
-    public:
-        bool operator()(Student l , Student r)
-        {
-            if (l.name == r.name) return l.roll > r.roll;
-            else return l.name > r.name;
-        }
-};
+// class Student
+// {
+//     public:
+//         string name;
+//         int roll;
+//         int marks;
+//         Student(string name , int roll , int marks)
+//         {
+//             this->name = name;
+//             this->roll = roll;
+//             this->marks = marks;
+//         }
+// };
+// class cmp
+// {
+//     public:
+//         bool operator()(Student l , Student r)
+//         {
+//             if (l.name == r.name) return l.roll > r.roll;
+//             else return l.name > r.name;
+//         }
+// };
 
-int main()
-{
-    priority_queue<Student , vector<Student> , cmp> pq;
-    int n; cin >> n;
-    for (int i = 0 ; i < n ; i++)
-    {
-        string name; cin >> name;
-        int roll, marks; cin >> roll >> marks;
-        Student obs(name , roll , marks);
-        pq.push(obs);
-    }
-    cout << "###" << endl;
-    while(!pq.empty())
-    {
-        cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks << endl;
-        pq.pop();
-    }
-}
+// int main()
+// {
+//     priority_queue<Student , vector<Student> , cmp> pq;
+//     int n; cin >> n;
+//     for (int i = 0 ; i < n ; i++)
+//     {
+//         string name; cin >> name;
+//         int roll, marks; cin >> roll >> marks;
+//         Student obs(name , roll , marks);
+//         pq.push(obs);
+//     }
+//     cout << "###" << endl;
+//     while(!pq.empty())
+//     {
+//         cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks << endl;
+//         pq.pop();
+//     }
+// }
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
 
 
-int main()
-{
-    vector<int> v;
-    int n; cin >> n;
-    for(int i = 0 ; i < n ; i++)
-    {
-        int x; cin >> x;
-        v.push_back(x);
+// int main()
+// {
+//     vector<int> v;
+//     int n; cin >> n;
+//     for(int i = 0 ; i < n ; i++)
+//     {
+//         int x; cin >> x;
+//         v.push_back(x);
         
-        int cur_idx = v.size() - 1;
+//         int cur_idx = v.size() - 1;
 
-        while (cur_idx != 0)
-        {
-            int parent_idx = (cur_idx - 1) / 2;
+//         while (cur_idx != 0)
+//         {
+//             int parent_idx = (cur_idx - 1) / 2;
 
-            if (v[parent_idx] < v[cur_idx]) swap(v[parent_idx] , v[cur_idx]);
-            else break;
-            cur_idx = parent_idx;
-        }
-    }
-    for (int val : v) cout << val << " ";
-}
+//             if (v[parent_idx] < v[cur_idx]) swap(v[parent_idx] , v[cur_idx]);
+//             else break;
+//             cur_idx = parent_idx;
+//         }
+//     }
+//     for (int val : v) cout << val << " ";
+// }
